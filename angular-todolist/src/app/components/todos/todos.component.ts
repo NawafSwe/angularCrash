@@ -26,8 +26,8 @@ export class TodosComponent implements OnInit {
       console.log(`error ${e}`)
     }
   }
-  deleteTodo(id) {
-    this.todos = this.todos.filter(todo => todo.id != id);
+  deleteTodo(currentTodo: Todo) {
+    this.todos = this.todos.filter(todo => todo.id != currentTodo.id);
   }
 
 }

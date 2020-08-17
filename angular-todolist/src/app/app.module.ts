@@ -1,13 +1,19 @@
 /* -------------- Angular built in  Modules -------------- */
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+//to use http request
 import { HttpClientModule } from '@angular/common/http';
+//to allow to binding values from form 
+import { FormsModule } from '@angular/forms';
+
 
 /* -------------- Components -------------- */
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TodosComponent } from './components/todos/todos.component';
 import { TodoItemComponent } from './components/todo-item/todo-item.component';
+import { HeaderComponent } from './components/layout/header/header.component';
+import { AddTodoComponent } from './components/add-todo/add-todo.component';
 
 /* the entry of the app where you will put your 
 components inside the decelerations */
@@ -16,13 +22,17 @@ components inside the decelerations */
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
     TodosComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    AddTodoComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
 
   ],
   providers: [],

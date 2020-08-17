@@ -1,6 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { TodoService } from '../../services/todo.service'
 //input used when we receive a props values from others 
+//Event Emitter for emit an event  
 import { Todo } from '../../models/Todo'
 
 
@@ -12,6 +13,8 @@ import { Todo } from '../../models/Todo'
 export class TodoItemComponent implements OnInit {
   //putting input object to bind 
   @Input() todo: Todo
+  //we outputting something to the parent container
+  @Output() deleteTodo: EventEmitter<Todo> = new EventEmitter();
 
   constructor(private todoService: TodoService) { }
 
@@ -36,5 +39,15 @@ export class TodoItemComponent implements OnInit {
     } catch (error) {
       console.log(`error ${error.message}`)
     }
+  }
+
+  onDelete(todo: Todo) {
+    //deleting from the UI part 
+    this.deleteTodo.emit(todo);
+
+    //doing delete for the server 
+    this.todoService.deleteTodo(todo).subscribe(todo => {
+      console.log(`deleted todo is  ${todo}`);
+    })
   }
 }

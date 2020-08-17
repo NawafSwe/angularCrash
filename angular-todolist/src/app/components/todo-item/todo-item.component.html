@@ -4,11 +4,10 @@
     each time to check and run this func
     3- an input or button we but the event as (`name of event`)
 -->
-
 <div [ngClass]="setClasses()">
   <p>
-    <input (change)="markTodo(todo)" type="checkbox" name="" id=""/>
+    <input (change)="markTodo(todo)" type="checkbox" name="" id="" />
     {{ todo.title }}
-    <button class="del">x</button>
+    <button (click)="onDelete(todo)" class="del">x</button>
   </p>
 </div>

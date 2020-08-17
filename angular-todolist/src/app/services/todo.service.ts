@@ -26,4 +26,15 @@ export class TodoService {
     return this.http.put(newUrl, todo, httpOptions);
 
   }
+
+  deleteTodo(todo: Todo): Observable<Todo> {
+    const newUrl = `${this.url}/${todo.id}`;
+    return this.http.delete<Todo>(newUrl, httpOptions);
+
+  }
+
+  addTodo(todo: Todo): Observable<Todo> {
+    const newUrl = `${this.url}`;
+    return this.http.post<Todo>(newUrl, todo, httpOptions);
+  }
 }
