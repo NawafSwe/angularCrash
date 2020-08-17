@@ -1,0 +1,14 @@
+<!--
+    1- we use class ng directive to apply a class based on condition
+    2- we assign the function setClasses to the div to be trigger
+    each time to check and run this func
+    3- an input or button we but the event as (`name of event`)
+-->
+
+<div [ngClass]="setClasses()">
+  <p>
+    <input (change)="markTodo()" type="checkbox" name="" id="" />
+    {{ todo.title }}
+    <button (click)="deleteTodo(todo.id)" class="del">x</button>
+  </p>
+</div>
