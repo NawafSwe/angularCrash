@@ -7,8 +7,8 @@
 
 <div [ngClass]="setClasses()">
   <p>
-    <input (change)="markTodo()" type="checkbox" name="" id="" />
+    <input (change)="markTodo(todo)" type="checkbox" name="" id=""/>
     {{ todo.title }}
-    <button (click)="deleteTodo(todo.id)" class="del">x</button>
+    <button class="del">x</button>
   </p>
 </div>

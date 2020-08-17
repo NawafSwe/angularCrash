@@ -4,9 +4,4 @@
     2- by saying [todo] = "todo" we are passing the todo as a prop to the app-todo-item
 
 -->
-<app-todo-item
-  *ngFor="let todo of todos"
-  [todo]="todo"
-  [deleteTodo]="deleteTodo"
->
-</app-todo-item>
+<app-todo-item *ngFor="let todo of todos" [todo]="todo"> </app-todo-item>

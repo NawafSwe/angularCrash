@@ -1,6 +1,9 @@
+/* -------------- Angular built in  Modules -------------- */
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
+/* -------------- Components -------------- */
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TodosComponent } from './components/todos/todos.component';
@@ -18,7 +21,9 @@ components inside the decelerations */
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
