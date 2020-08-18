@@ -6,7 +6,7 @@
 -->
 <div [ngClass]="setClasses()">
   <p>
-    <input (change)="markTodo(todo)" type="checkbox" name="" id="" />
+    <input  (change)="markTodo(todo)" type="checkbox" name="" id="" />
     {{ todo.title }}
     <button (click)="onDelete(todo)" class="del">x</button>
   </p>

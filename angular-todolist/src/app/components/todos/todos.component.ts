@@ -30,4 +30,18 @@ export class TodosComponent implements OnInit {
     this.todos = this.todos.filter(todo => todo.id != currentTodo.id);
   }
 
+  addTodo(todo: Todo): void {
+    this.todos.push(todo);
+
+    //adding it to the server 
+    try {
+      this.todoService.addTodo(todo).subscribe(todo => {
+        console.log(todo);
+      })
+    } catch (e) {
+      console.log(`error happen ${e.message}`);
+    }
+
+  }
+
 }

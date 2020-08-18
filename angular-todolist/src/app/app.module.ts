@@ -14,6 +14,7 @@ import { TodosComponent } from './components/todos/todos.component';
 import { TodoItemComponent } from './components/todo-item/todo-item.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
+import { AboutComponent } from './pages/about/about.component';
 
 /* the entry of the app where you will put your 
 components inside the decelerations */
@@ -26,6 +27,7 @@ components inside the decelerations */
     TodosComponent,
     TodoItemComponent,
     AddTodoComponent,
+    AboutComponent,
 
   ],
   imports: [
